@@ -1,0 +1,25 @@
+DELIM="-ohpc"
+CMD_TIMEOUT="20s"
+ARCH="x86_64"
+DISTRO_FAMILY="RHEL"
+COMPILER_FAMILIES="gnu"
+MPI_FAMILIES="mvapich2"
+PYTHON_FAMILIES="python2"
+BEEGFS_TEST_PATH="/mnt/beegfs"
+LUSTRE_TEST_PATH="/mnt/lustre/ohpc-test"
+NUM_COMPUTES=2
+export BATS_USE_MKTEMP=1
+export OMPI_MCA_rmaps_base_oversubscribe=1
+#
+#------------------------
+# Scalasca profiling options
+#------------------------
+#
+SCAN_MPI_LAUNCHER=prun
+#
+
+#------------------------
+# GLobal openblas options
+#------------------------
+#
+export OMP_NUM_THREADS=2
